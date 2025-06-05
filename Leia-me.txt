@@ -1,0 +1,24 @@
+0) Pré-Requisito: Python instalado no PC.
+
+Rodar os comandos no terminal:
+1) python.exe -m pip install --upgrade pip
+ 
+2) Set-ExecutionPolicy -Scope Process -ExecutionPolicy bypass
+
+3) Criar ambiente virtual
+   
+   python -m venv env
+
+4) Ativar o Ambbiente Virtual: 
+
+   No Windows: env\Scripts\activate
+   No Linux: source env/bin/activate 
+
+5) pip install -r requirements.txt
+   python -m pip install -r requirements.txt
+
+
+Ollama
+Link: <https://ollama.com/>
+Instalar: ollama pull <versao>
+Rodar: ollama run <versao>

@@ -1,0 +1,1 @@
+A verificação do fato revela que o Real Betis não foi campeão da UEFA Champions League em 2025. Na realidade, eles participaram da final da UEFA Conference League, onde foram derrotados pelo Chelsea com um placar de 4-1. Portanto, a afirmação de que o Real Betis venceu a Champions League em 2025 é FALSA.

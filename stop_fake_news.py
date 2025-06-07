@@ -5,6 +5,14 @@ from crewai_tools import SerperDevTool
 import streamlit as st
 import time
 import datetime
+import qrcode
+from PIL import Image
+from io import BytesIO
+import base64
+import re
+import pandas as pd
+import matplotlib.pyplot as plt
+from collections import Counter
 
 # Carregando variáveis de ambiente
 load_dotenv()
@@ -21,6 +29,8 @@ llm = LLM(model='gpt-4o-mini', api_key=OPENAI_API_KEY)
 # Instanciando a ferramenta de busca
 search_tool = SerperDevTool()
 
+classificacoes = ["confiável", "não confiável", "parcialmente confiável", "confiável", "confiável", "não confiável"]
+contagem = Counter(classificacoes)
 
 st.set_page_config(page_title="Stop Fake News - Verificador", page_icon="📰", layout="centered")
 st.markdown("""
@@ -35,6 +45,8 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+
+
 
 # SIDEBAR (DASHBOARD)
 st.sidebar.title("📊 Verificações")
@@ -80,16 +92,16 @@ executar = st.button("Executar Verificação")
 if executar and tema:
     with st.spinner("Analisando..."):
         # Aqui roda a verificação (simulação com sleep)
-        time.sleep(60)  # simula tempo de análise
+        time.sleep(5)  # simula tempo de análise
     st.success("Análise concluída!")
     with st.spinner ("Processando informação..."):
-        time.sleep(25)
+        time.sleep(5)
     st.success("Informações processadas...")
     
     # Agentes
     agente_buscador = Agent(
     role="Jornalista Investigativo",
-    goal=f"Investigar sobre {tema} em fontes confiáveis como https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=pt , https://lupa.uol.com.br/ ,  https://www.aosfatos.org/ ,  https://g1.globo.com/ , https://www.cnnbrasil.com.br/  , https://www.bbc.com/, etc.",
+    goal=f"Investigar sobre {tema} em fontes confiáveis como: Google factcheck(https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=pt) , Lupa(https://lupa.uol.com.br/) ,  Aos Fatos(https://www.aosfatos.org/) ,  G1(https://g1.globo.com/) , CNN(https://www.cnnbrasil.com.br/)  , BBC(https://www.bbc.com/), etc.",
     backstory="Você é especialista em investigação de fake news com amplo acesso a ferramentas de busca.",
     tools=[search_tool],
     llm=llm,
@@ -116,8 +128,17 @@ if executar and tema:
 
     agente_verificador = Agent(
         role='Verificador de Fatos',
-        goal="Verificar os fatos presentes no texto final com fontes confiáveis como https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=pt, https://lupa.uol.com.br/ e https://www.aosfatos.org/ ,  https://g1.globo.com/ , https://www.cnnbrasil.com.br/  , https://www.bbc.com/  ."
-            "Mostre se a informação perguntada no {tema} é VERDADEIRA, FALSA ou PACIALMENTE VERDADEIRA",
+        goal="Verificar os fatos presentes no texto final com fontes confiáveis como: Google factcheck(https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=pt) , Lupa(https://lupa.uol.com.br/) ,  Aos Fatos(https://www.aosfatos.org/) ,  G1(https://g1.globo.com/) , CNN(https://www.cnnbrasil.com.br/)  , BBC(https://www.bbc.com/), etc."
+            "Mostre se a informação perguntada no {tema} é VERDADEIRA, FALSA ou PACIALMENTE VERDADEIRA"
+            "No final da sua resposta, **obrigatoriamente** adicione uma linha com o seguinte formato:"
+            "STATUS: [classificação]"
+            "Onde `[classificação]` deve ser uma das seguintes opções:"
+            "- Verdadeira"
+            "- falsa"
+            "- duvidosa"
+
+            "Exemplo de final da resposta:"
+            "STATUS: confiável",
         backstory=(
             "Você é um especialista em fact-checking, experiente em identificar notícias falsas "
             "e confirmar dados com fontes oficiais e confiáveis."
@@ -227,13 +248,113 @@ if executar and tema:
 
     equipe_final.kickoff()
 
+    # Função para gerar o QR code em base64
+    def gerar_qr_base64(link):
+        qr = qrcode.QRCode(box_size=2, border=1)
+        qr.add_data(link)
+        qr.make(fit=True)
+        img = qr.make_image(fill_color="black", back_color="white")
+        buffer = BytesIO()
+        img.save(buffer, format="PNG")
+        img_b64 = base64.b64encode(buffer.getvalue()).decode()
+        return f'<img src="data:image/png;base64,{img_b64}" width="60" style="margin-left:10px;" />'
+
+    # Regex para capturar links http/https
+    link_pattern = re.compile(r'(https?://[^\s\)\]]+)')
+
+    # Leitura do relatório de verificação
     with open("relatorio_verificacao.md", "r", encoding="utf-8") as f:
         st.markdown("### 🔍 Relatório de Verificação de Fatos")
-        st.markdown(f.read())
+        texto_verificacao = f.read()
 
+        linhas_formatadas = []
+
+        for linha in texto_verificacao.split("\n"):
+            linha = linha.strip()
+            links = link_pattern.findall(linha)
+            if links:
+                for link in links:
+                    qr_img = gerar_qr_base64(link)
+                    # Substitui o link pelo link com o QR ao lado
+                    linha = linha.replace(link, f'<a href="{link}" target="_blank">{link}</a>{qr_img}')
+                linhas_formatadas.append(f'<div style="margin-bottom:10px;">{linha}</div>')
+            else:
+                linhas_formatadas.append(f"<p>{linha}</p>")
+
+    # Exibe o conteúdo formatado com imagens inline
+    st.markdown("\n".join(linhas_formatadas), unsafe_allow_html=True)
     with open("Resultado_final.md", "r", encoding="utf-8") as f:
         st.markdown("### ✅ Parecer Final")
         st.markdown(f.read())
+
+    # Extrair a classificação final (exemplo: STATUS: Confiável)
+    match = re.search(r"STATUS:\s*(.*?)\n", 'parecer_final')
+    classificacao_final = match.group(1).strip().capitalize() if match else "Desconhecida"
+
+    # Salvar no histórico da sessão
+    if "Confiável" in classificacao_final:
+        classificacao = "Confiável"
+    elif "Possivelmente Falsa" in classificacao_final:
+        classificacao = "Possivelmente Falsa"
+    else:
+        classificacao = "Exige Verificação Adicional"
+
+    st.session_state['historico'].append({
+        "tema": tema,
+        "data": datetime.datetime.now().strftime("%d/%m/%Y %H:%M"),
+        "classificacao": classificacao
+    })
+
+    # Contar as classificações reais no histórico
+    contagem = Counter([item['classificacao'] for item in st.session_state['historico']])
+
+    # Labels e valores para o gráfico
+    labels = list(contagem.keys())
+    valores = list(contagem.values())
+
+    # Cores (você pode ajustar conforme os rótulos)
+    cores = []
+    for label in labels:
+        if label == "Verdadeira":
+            cores.append('#4CAF50')  # verde
+        elif label == "Possivelmente Falsa":
+            cores.append('#FF9800')  # laranja
+        else:
+            cores.append('#F44336')  # vermelho
+
+    # Criar gráfico de pizza e mostrar no Streamlit
+    fig, ax = plt.subplots(figsize=(6,6))
+    ax.pie(valores, labels=labels, autopct='%1.1f%%', startangle=140, colors=cores)
+    ax.set_title('Distribuição das Classificações de Confiabilidade')
+    ax.axis('equal')  # para ficar circular
+
+    st.pyplot(fig)
+
+    st.markdown("---")
+     # Frase de impacto após o parecer
+    st.markdown(
+    """
+    <div style='text-align: center; color: darkred; font-size: 24px; font-weight: bold; margin-top: 40px;'>
+        🚨 Cheque antes de compartilhar!
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+    
+    st.markdown(
+    """
+    <div style='
+        text-align: center;
+        color: #37474f;
+        font-size: 35px;
+        font-weight: normal;
+    '>
+        ✅ Combater fake news começa com você.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 
 
        # === Salvando no histórico da sessão ===
@@ -249,9 +370,6 @@ if executar and tema:
         "data": datetime.datetime.now().strftime("%d/%m/%Y %H:%M"),
         "classificacao": classificacao
     })
-
-
-    
 
 
 

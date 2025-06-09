@@ -1,2 +1,10 @@
 crewai
-crewai[tools]
+crewai_tools
+python-dotenv
+openai
+streamlit
+qrcode
+pillow
+serper
+matplotlib
+pandas

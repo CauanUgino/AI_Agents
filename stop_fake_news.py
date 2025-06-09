@@ -125,7 +125,7 @@ if executar and tema:
         memory=False,
         allow_delegation=False
 )
-
+    #Agente Verificador
     agente_verificador = Agent(
         role='Verificador de Fatos',
         goal="Verificar os fatos presentes no texto final com fontes confiáveis como: Google factcheck(https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=pt) , Lupa(https://lupa.uol.com.br/) ,  Aos Fatos(https://www.aosfatos.org/) ,  G1(https://g1.globo.com/) , CNN(https://www.cnnbrasil.com.br/)  , BBC(https://www.bbc.com/), etc."
@@ -173,14 +173,14 @@ if executar and tema:
     )
 
 
-    # Tarefas da primeira etapa
+    # Tarefas do buscador
     tarefa_buscador = Task(
         description=f'Pesquisar notícias confiáveis sobre {tema} nos sites como https://www.bbc.com/ , https://www.bbc.com/portuguese/topics/cz74k717pw5t , https://www.bbc.com/portuguese/topics/cz74k717pw5t , https://g1.globo.com/https://g1.globo.com/ e criar um relatório com fatos e links.',
         expected_output='Relatório com data, fontes e links.',
         agent=agente_buscador,
         output_file='relatorio_investigativo.md'
     )
-
+    #tarefa linguística
     tarefa_linguistica = Task(
         description='Analisar o texto jornalístico e avaliar o estilo textual conforme critérios definidos.',
         expected_output=(
@@ -204,7 +204,7 @@ if executar and tema:
         input='relatorio_linguistico.md',
         output_file='relatorio_verificacao.md'
     )
-
+    #Equipe de Agentes
     equipe_inicial = Crew(
         agents=[agente_buscador, agente_linguistico, agente_verificador],
         tasks=[tarefa_buscador, tarefa_linguistica, tarefa_verificacao],
@@ -213,10 +213,10 @@ if executar and tema:
     )
 
     equipe_inicial.kickoff(inputs={'tema': tema})
-
+    #Abre e ler os dois arquivos
     with open("relatorio_linguistico.md", "r", encoding="utf-8") as f1, open("relatorio_verificacao.md", "r", encoding="utf-8") as f2:
         texto_final = "# Texto Jornalístico Revisado\n\n" + f1.read() + "\n\n# Relatório de Verificação de Fatos\n\n" + f2.read()
-
+    #Junta os dois arquios em um só 
     with open("entrada_classificacao.md", "w", encoding="utf-8") as f_out:
         f_out.write(texto_final)
 
@@ -238,7 +238,7 @@ if executar and tema:
         output_file='Resultado_final.md'
     )
 
-
+    #Classifica a confiabilidade da noticia com base no erificador e pesquisa em fontes coonfiaveis 
     equipe_final = Crew(
         agents=[agente_classificador],
         tasks=[tarefa_classificacao],

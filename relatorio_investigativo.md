@@ -1,27 +1,25 @@
-Relatório sobre o Real Betis na Champions League 2025
+Relatório de Investigação sobre o Depoimento do Amigo do Empresário
 
-Data: 28 de Maio de 2025
-Resumo: O Real Betis participou da final da UEFA Conference League, enfrentando o Chelsea. O Chelsea venceu a partida com um impressionante placar de 4-1, tornando-se o campeão da competição.
+Data: 6 de junho de 2025
 
-Fontes: 
-1. Chelsea 4-1 Betis (May 28, 2025) Game Analysis - ESPN
-   Link: [ESPN](https://www.espn.com/soccer/report/_/gameId/733676)
-   Snippet: Enzo Maresca reacts to Chelsea's 4-1 victory over Real Betis to win the UEFA Conference League and praises his team's progress this season.
-   
-2. Palmer inspires Chelsea to 4-1 win over Betis in Conference 
-   Link: [Reuters](https://www.reuters.com/sports/soccer/palmer-inspires-chelsea-victory-conference-league-final-2025-05-28/)
-   Snippet: Chelsea sparked into life in the second half as they came from behind to claim the Conference League trophy with a 4-1 victory over Real Betis.
+1. **Fonte:** G1 
+   - **Link:** [G1 - Amigo diz em depoimento que empresário achado em buraco estava 'alterado e bastante agitado'](https://g1.globo.com/sp/sao-paulo/noticia/2025/06/06/amigo-diz-em-depoimento-que-empresario-achado-em-buraco-estava-alterado-e-bastante-agitado-em-evento-no-autodromo.ghtml)
+   - **Resumo:** Em depoimento à polícia, Rafael, amigo de Adalberto, disse que o empresário consumiu maconha e oito copos de cerveja durante o evento.
 
-3. Chelsea beats Real Betis 4-1 to win UEFA Conference League
-   Link: [NBC Connecticut](https://www.nbcconnecticut.com/news/sports/soccer/chelsea-real-betis-conference-final-score/3575059/)
-   Snippet: Chelsea produced an impressive second-half rally to beat Real Betis 4-1 in the Conference League final and become the first...
+2. **Fonte:** InfoMoney 
+   - **Link:** [InfoMoney - Amigo depõe e diz que empresário encontrado em buraco estava alterado](https://www.infomoney.com.br/brasil/amigo-depoe-e-diz-que-empresario-encontrado-em-buraco-em-interlagos-estava-alterado/)
+   - **Resumo:** Amigo depõe e diz que empresário encontrado em buraco em Interlagos estava "alterado", com depoimento revelando consumo de drogas e bebida.
 
-4. Real Betis look to make more history in their first ever European final
-   Link: [La Liga](https://www.laliga.com/en-US/news/real-betis-look-to-make-more-history-in-their-first-ever-european-final)
-   Snippet: This could be a historic week for Real Betis, who will take on Chelsea in the UEFA Conference League final.
+3. **Fonte:** Terra 
+   - **Link:** [Terra - Empresário achado em buraco estava 'alterado e agitado'](https://www.terra.com.br/noticias/empresario-achado-em-buraco-estava-alterado-e-agitado-em-evento-diz-amigo,d4c5d7af492d6933d47be33c144896b9ahrnsuu3.html)
+   - **Resumo:** O amigo Rafael relatou que consumiram maconha com desconhecidos durante o evento.
 
-5. Chelsea wins Conference League title with 4-1 victory over Real Betis
-   Link: [WTOP](https://wtop.com/sports/2025/05/chelsea-wins-conference-league-title-with-4-1-victory-over-real-betis-in-final-of-europes-third-tier-competition/)
-   Snippet: Chelsea wins Conference League title with a 4-1 victory over Real Betis in final of Europe's third-tier competition.
+4. **Fonte:** NSC Total 
+   - **Link:** [NSC Total - Amigo diz que empresário encontrado em buraco em Interlagos](https://www.nsctotal.com.br/noticias/amigo-diz-que-empresario-encontrado-em-buraco-em-interlagos-usou-maconha-e-estava-alterado)
+   - **Resumo:** Segundo o amigo Rafael, Adalberto estava alterado após consumo de maconha e álcool.
 
-Conclusão: O Real Betis não foi campeão da Champions League em 2025, mas participou da final da UEFA Conference League, onde foi derrotado pelo Chelsea com um placar de 4-1. Não há registros de que o Real Betis tenha conquistado a Champions League em 2025.
+5. **Fonte:** O Globo 
+   - **Link:** [O Globo - Em depoimento à polícia, amigo diz que empresário encontrado em buraco estava alterado](https://oglobo.globo.com/brasil/noticia/2025/06/06/a-policia-amigo-diz-que-empresario-encontrado-em-buraco-estava-alterado-e-bastante-agitado.ghtml)
+   - **Resumo:** O depoimento indica que o empresário pode ter sido colocado no buraco ainda com vida; encontra-se vestígios de roupas.
+
+Este relatório reúne informações sobre o estado do empresário encontrado em um buraco e seu relato de comportamento alterado durante eventos em um autódromo.

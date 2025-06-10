@@ -55,6 +55,7 @@ if 'historico' not in st.session_state:
 
 
 
+
 # Informações do histórico
 total_analises = len(st.session_state['historico'])
 ultima_analise = st.session_state['historico'][-1]['tema'] if st.session_state['historico'] else "-"
@@ -197,6 +198,7 @@ if executar and tema:
     tarefa_verificacao = Task(
         description="Verificar os fatos do texto editado com fontes em sites como https://toolbox.google.com/factcheck/explorer/search/list:recent;hl=pt , https://lupa.uol.com.br/, Aos https://www.aosfatos.org/ . Gerar relatório de veracidade.",
         expected_output="Exibir as noticias encontradas, e abaixo exibir a fonte e link"
+                        "Criar Um Qrcode do Link Exibir ao lado dele"
                         "Traduzir tudo para o Português do Brasil"
                         "Exiba o resultado da verificação da noticia informada no tema, dizendo se é VERDADEIRA, FALSA ou PACIALMENTE VERDADEIRA"
                         "Exiba a noticia das fontes encontradas",

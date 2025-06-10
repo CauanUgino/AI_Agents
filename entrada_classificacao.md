@@ -1,34 +1,33 @@
 # Texto Jornalístico Revisado
 
-**Relatório sobre o Real Betis na Champions League 2025**  
+**Relatório de Investigação sobre o Depoimento do Amigo do Empresário**
 
-**Data:** 28 de Maio de 2025  
+**Data: 6 de junho de 2025**
 
-**Resumo:** O Real Betis disputou a final da UEFA Conference League contra o Chelsea. O Chelsea venceu a partida por 4 a 1, consagrando-se campeão da competição.  
+1. **Fonte:** G1  
+   - **Link:** [G1 - Amigo diz em depoimento que empresário encontrado em buraco estava alterado](https://g1.globo.com/sp/sao-paulo/noticia/2025/06/06/amigo-diz-em-depoimento-que-empresario-achado-em-buraco-estava-alterado-e-bastante-agitado-em-evento-no-autodromo.ghtml)  
+   - **Resumo:** Em depoimento à polícia, Rafael, amigo de Adalberto, afirmou que o empresário consumiu maconha e oito copos de cerveja durante o evento.
 
-**Fontes:**  
-1. **Chelsea 4-1 Betis** (28 de maio de 2025) Análise de Jogo - ESPN  
-   Link: [ESPN](https://www.espn.com/soccer/report/_/gameId/733676)  
-   Trecho: Enzo Maresca comenta sobre a vitória do Chelsea por 4 a 1 sobre o Real Betis na UEFA Conference League e elogia o progresso de sua equipe nesta temporada.
+2. **Fonte:** InfoMoney  
+   - **Link:** [InfoMoney - Amigo depõe e diz que empresário encontrado em buraco estava alterado](https://www.infomoney.com.br/brasil/amigo-depoe-e-diz-que-empresario-encontrado-em-buraco-em-interlagos-estava-alterado/)  
+   - **Resumo:** Em seu depoimento, o amigo relatou que o empresário encontrado em buraco em Interlagos estava sob efeito de drogas e álcool.
 
-2. **Palmer inspira Chelsea a vitória sobre o Betis na Conference**  
-   Link: [Reuters](https://www.reuters.com/sports/soccer/palmer-inspires-chelsea-victory-conference-league-final-2025-05-28/)  
-   Trecho: O Chelsea teve um desempenho destacado no segundo tempo, superando o Real Betis para conquistar o troféu da Conference League.
+3. **Fonte:** Terra  
+   - **Link:** [Terra - Empresário encontrado em buraco estava alterado](https://www.terra.com.br/noticias/empresario-achado-em-buraco-estava-alterado-e-agitado-em-evento-diz-amigo,d4c5d7af492d6933d47be33c144896b9ahrnsuu3.html)  
+   - **Resumo:** Rafael destacou que consumiram maconha com pessoas desconhecidas durante o evento.
 
-3. **Chelsea vence Real Betis por 4-1 e conquista a UEFA Conference League**  
-   Link: [NBC Connecticut](https://www.nbcconnecticut.com/news/sports/soccer/chelsea-real-betis-conference-final-score/3575059/)  
-   Trecho: O Chelsea realizou uma recuperação notável no segundo tempo para vencer o Real Betis por 4 a 1 na final da Conference League.
+4. **Fonte:** NSC Total  
+   - **Link:** [NSC Total - Amigo diz que empresário encontrado em buraco estava alterado](https://www.nsctotal.com.br/noticias/amigo-diz-que-empresario-encontrado-em-buraco-em-interlagos-usou-maconha-e-estava-alterado)  
+   - **Resumo:** O amigo Rafael informou que Adalberto parecia alterado após o consumo de maconha e bebidas alcoólicas.
 
-4. **Real Betis busca mais história na sua primeira final europeia**  
-   Link: [La Liga](https://www.laliga.com/en-US/news/real-betis-look-to-make-more-history-in-their-first-ever-european-final)  
-   Trecho: Esta poderia ser uma semana histórica para o Real Betis, que enfrentou o Chelsea na final da UEFA Conference League.
+5. **Fonte:** O Globo  
+   - **Link:** [O Globo - Em depoimento à polícia, amigo diz que empresário encontrado em buraco estava alterado](https://oglobo.globo.com/brasil/noticia/2025/06/06/a-policia-amigo-diz-que-empresario-encontrado-em-buraco-estava-alterado-e-bastante-agitado.ghtml)  
+   - **Resumo:** O depoimento sugere que o empresário pode ter sido colocado no buraco ainda com vida e que foram encontrados vestígios de roupas no local.
 
-5. **Chelsea conquista título da Conference League com vitória de 4-1 sobre o Betis**  
-   Link: [WTOP](https://wtop.com/sports/2025/05/chelsea-wins-conference-league-title-with-4-1-victory-over-real-betis-in-final-of-europes-third-tier-competition/)  
-   Trecho: Chelsea conquistou o título da Conference League com uma vitória por 4 a 1 sobre o Real Betis na final da competição.
-
-**Conclusão:** O Real Betis não conquistou a Champions League em 2025, mas teve a oportunidade de jogar a final da UEFA Conference League, onde foi derrotado pelo Chelsea com um placar de 4 a 1. Não há registros de que o Real Betis tenha vencido a Champions League em 2025.
+Este relatório reúne informações sobre o estado do empresário encontrado em um buraco e seu relato de comportamento alterado durante eventos em um autódromo.
 
 # Relatório de Verificação de Fatos
 
-A verificação do fato revela que o Real Betis não foi campeão da UEFA Champions League em 2025. Na realidade, eles participaram da final da UEFA Conference League, onde foram derrotados pelo Chelsea com um placar de 4-1. Portanto, a afirmação de que o Real Betis venceu a Champions League em 2025 é FALSA.
+Após verificar as informações, o depoimento do amigo do empresário encontrado em um buraco, chamado Adalberto, confirma que ele estava "alterado e bastante agitado" durante o evento. O amigo afirmou que Adalberto consumiu maconha e oito copos de cerveja, indicando um estado alterado. As fontes que corroboram essa informação incluem G1, InfoMoney, Terra, NSC Total e O Globo, que todos relatam comportamentos alterados do empresário. Portanto, a afirmação é verdadeira, fundamentada em múltiplas reportagens da mídia.
+```
+STATUS: verdadeira

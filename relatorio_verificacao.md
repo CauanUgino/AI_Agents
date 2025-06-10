@@ -1,1 +1,3 @@
-A verificação do fato revela que o Real Betis não foi campeão da UEFA Champions League em 2025. Na realidade, eles participaram da final da UEFA Conference League, onde foram derrotados pelo Chelsea com um placar de 4-1. Portanto, a afirmação de que o Real Betis venceu a Champions League em 2025 é FALSA.
+Após verificar as informações, o depoimento do amigo do empresário encontrado em um buraco, chamado Adalberto, confirma que ele estava "alterado e bastante agitado" durante o evento. O amigo afirmou que Adalberto consumiu maconha e oito copos de cerveja, indicando um estado alterado. As fontes que corroboram essa informação incluem G1, InfoMoney, Terra, NSC Total e O Globo, que todos relatam comportamentos alterados do empresário. Portanto, a afirmação é verdadeira, fundamentada em múltiplas reportagens da mídia.
+```
+STATUS: verdadeira
